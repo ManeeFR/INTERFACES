@@ -1,0 +1,96 @@
+@use "../base/variables" as var;
+@use "../base/mixins" as mix;
+
+
+@include mix.tablet {
+    .header__superior {
+        img {
+            min-height: 20vh;
+            min-width: 35vw;
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    
+}
+@include mix.desktop {
+    .header__superior {
+        justify-content: space-between;
+        nav {
+            max-height: 25vh;
+            margin: 0 3vw;
+        }
+        img {
+            display: block;
+            max-height: 200px;
+            margin: auto;
+        }
+    }
+    .navegacion {
+        margin-right: 5vw;
+    }
+    
+}
+
+/*Comenzamos por dar formato a las listas, elimiando viñetas y definiendo fondo, color, etc*/
+#lista1 {
+    width: 200px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+/*A continuacion daremos formato a los diferentes submenus, identificandolos por su posicion como hijos de la lista o si queremos, tambien podriamos hacerlos por su clase (submenu)*/
+#lista1 li { 
+    display: flex; flex-direction: row;
+    float: left;
+    list-style: none;
+    margin:0px;
+    padding: 0px;
+}
+.submenu li{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+/*Proseguimos con los vinculos contenidos en esos elementos, que es donde trabajaremos a partir de ahora, definiendo su aspecto*/
+#lista1 li a, .submenu li a {
+    display: block;
+    width: 200px;
+    text-decoration: none;
+    text-align: center;
+    color: darkcyan;
+    font-family: "Comic Sans", sans-serif;
+    font-size: 21px;font-size: 21px;
+    background-color: darksalmon;
+    background-image: linear-gradient(to bottom right, darksalmon, pink);
+}
+/*Tambien definiremos un estilo diferente para cuando el raton  pase sobre ellos*/
+#lista1 li a:hover, .submenu li a:hover {
+    color: lightskyblue;
+    background-color: red;
+    background-image: linear-gradient(to bottom right, darkred, orange);
+    font-size: 21px;
+    background-size: contain;
+    text-shadow: #cbe7f8 -1px 1px 0px;
+}
+.submenu {
+    display: none;/*Esta instruccion hara desaparecer los submenus, los haramos aparecer solo al mover el raton sobre la opcion correcpondiente del menu principal*/
+    float: left;
+    width: 600px;
+    margin: 0px;
+    padding: 0px;
+}
+/*Ahora definiremos una regla para que aparezca el submenu correspondiente al pasar el raton sobre la opcion indicada en el menu principal*/
+#lista1 li:hover .submenu {
+    display: block;
+}
+/*Finalmente definimos otra regla para cambiar el aspecto cuando se Clickea sobre los enlaces*/
+#lista1 li a:active {
+    transform: scale(1.1);  
+    box-shadow: yellow 0px 0px 15px;
+    color: yellow;
+    text-shadow: none;
+}
+
