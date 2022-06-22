@@ -1,8 +1,0 @@
-@media screen and (min-width: 480px), (max-width: 767px) {
-  .header {
-    background-image: url(../../../build/img/mobile_bg.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
