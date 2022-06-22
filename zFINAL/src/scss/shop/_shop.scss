@@ -10,6 +10,7 @@
 
     &__title {
         margin-top: 5vh;
+
         h2 {
             text-align: center;
         }
@@ -28,7 +29,7 @@
             flex-wrap: wrap;
             gap: 2vw;
         }
-        
+
         &__card {
             display: flex;
             flex-direction: column;
@@ -37,7 +38,8 @@
             text-align: center;
             gap: 1vh;
 
-            img, &--title {
+            img,
+            &--title {
                 margin-bottom: 1.2vh;
                 border-radius: 10px;
                 width: 250px;
@@ -51,11 +53,12 @@
             @include mix.tablet() {
                 max-width: 48%;
             }
+
             @include mix.desktop() {
                 max-width: 30%;
             }
 
-            
+
 
             &--title {
                 display: flex;
@@ -65,9 +68,11 @@
                 align-items: center;
                 background-color: rgb(115, 214, 82);
                 max-height: 9vh;
+
                 h6 {
                     margin-top: 0.5rem;
                 }
+
                 div {
                     background-color: var.$secundario;
                     color: var.$negro;
@@ -84,14 +89,15 @@
 
             &--info {
                 padding: 2vh;
+
                 p {
                     font-size: 0.6rem;
                 }
             }
 
             .gems {
-                img {
-                }
+                img {}
+
                 max-height: 38vh;
                 height: 38vh;
             }
@@ -102,13 +108,11 @@
 
             margin-right: 25vw;
 
-            @include mix.mobile() { 
+            @media screen and (max-width: 1023px) {
                 display: none;
             }
-            @include mix.tablet() { 
-                display: none;
-            }
-            @include mix.desktop() { 
+
+            @media screen and (min-width: 1024px) {
                 display: inline;
             }
 
@@ -116,7 +120,7 @@
             min-width: 30vh;
             max-height: 30vh;
             max-width: 30vh;
-            
+
             &__icon {
                 height: 61vh;
                 width: 72vh;
