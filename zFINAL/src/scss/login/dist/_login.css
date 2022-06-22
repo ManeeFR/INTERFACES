@@ -1,0 +1,74 @@
+:root {
+  --primero: #8bc34a;
+  --segundo: salmon;
+  --negro: #000000;
+}
+
+.main {
+  background-image: url(../../../build/img/bg_form.svg);
+}
+
+.contenedor {
+  min-width: 80vw;
+  width: 80vw;
+  margin: 8vh auto;
+}
+
+.form {
+  background-color: var(--segundo);
+  border-radius: 10px;
+}
+.form__title p {
+  padding: 3vh 6vw 0 6vw;
+  font-size: 0.7em;
+}
+.form__container div h3 {
+  border-radius: 12px;
+  font-size: 0.9em;
+  background-color: var(--primero);
+}
+.form__container div .btn {
+  background-color: var(--primero);
+  border-width: 5px;
+  border-color: transparent;
+}
+.form__container div .btn:hover {
+  background-color: wheat;
+  color: var(--negro);
+  border-width: 5px;
+  border-color: var(--negro);
+}
+.form__container div input:not([type=submit]) {
+  font-size: x-small;
+}
+.form__container .box {
+  min-width: 60vw;
+  width: 60vw;
+}
+
+#image {
+  background-image: url(../../../build/img/bg_form.svg);
+  height: 80vh;
+  max-width: 100%;
+  position: relative;
+  color: white;
+  z-index: 1;
+  border-radius: 14px;
+}
+
+#image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+  border-radius: 14px;
+}
+
+.bg-primary,
+.btn-primary {
+  background-color: #03a9f4 !important;
+}

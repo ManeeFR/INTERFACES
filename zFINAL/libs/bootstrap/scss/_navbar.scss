@@ -15,7 +15,7 @@
 // other navbar variations.
 
 .navbar {
-  position: relative;
+  position: inherit;
   display: flex;
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
@@ -54,9 +54,9 @@
 // Used for brand, project, or site names.
 
 .navbar-brand {
-  padding-top: $navbar-brand-padding-y;
-  padding-bottom: $navbar-brand-padding-y;
-  margin-right: $navbar-brand-margin-end;
+  padding-top: 0;
+  padding-bottom: 0;
+  // margin-right: $navbar-brand-margin-end;
   @include font-size($navbar-brand-font-size);
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
@@ -165,7 +165,8 @@
     // stylelint-disable-next-line scss/selector-no-union-class-name
     &#{$infix} {
       @include media-breakpoint-up($next) {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        // gap: 2vh;
         justify-content: flex-start;
 
         .navbar-nav {

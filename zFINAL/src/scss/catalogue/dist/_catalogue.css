@@ -1,0 +1,29 @@
+.card-text,
+.text-muted {
+  font-size: xx-small;
+}
+
+img {
+  max-height: 50vh;
+  max-width: 25vw;
+  background-attachment: fixed;
+}
+
+.card {
+  min-width: 40%;
+}
+
+.bg-cards {
+  background-color: #c7c57d;
+}
+@media screen and (min-width: 768px) {
+  .bg-cards {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    max-width: 45%;
+  }
+}

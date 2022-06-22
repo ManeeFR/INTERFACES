@@ -1,0 +1,43 @@
+@use '../base/variables' as var;
+@use '../base/mixins' as mix;
+
+.streamers {
+
+    background-image: url(../../../build/img/chef_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(180deg, black, transparent 80%);
+    color: wheat;
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    gap: 2vh;
+    overflow-x: hidden;
+
+    h1 {
+        font-size: 1.6rem;
+    }
+    img {
+        // overflow-x: hidden;
+    }
+    a {
+        border-width: 5px;
+        border-color: transparent;
+    }
+    a:hover {
+        background-color: wheat;
+        color: var.$negro;
+        border-width: 5px;
+        border-color: var.$negro;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0 8vw;
+        text-align: center;
+    }
+
+}

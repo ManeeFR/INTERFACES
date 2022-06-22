@@ -6,7 +6,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  min-width: 40%; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  max-width: 497px;
   height: $card-height;
   word-wrap: break-word;
   background-color: $card-bg;
@@ -49,6 +50,8 @@
   flex: 1 1 auto;
   padding: $card-spacer-y $card-spacer-x;
   color: $card-color;
+  vertical-align: flex-end;
+  min-height: 20vh;
 }
 
 .card-title {

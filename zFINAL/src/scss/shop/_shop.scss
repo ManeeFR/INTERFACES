@@ -1,0 +1,129 @@
+@use '../base/variables'as var;
+@use '../base/mixins'as mix;
+
+.shop {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: salmon;
+
+    &__title {
+        margin-top: 5vh;
+        h2 {
+            text-align: center;
+        }
+    }
+
+    &__contenido {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        text-align: center;
+
+        @include mix.tablet() {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 2vw;
+        }
+        
+        &__card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 1vh;
+
+            img, &--title {
+                margin-bottom: 1.2vh;
+                border-radius: 10px;
+                width: 250px;
+                height: 207px;
+            }
+
+            --info {
+                max-height: 25vh;
+            }
+
+            @include mix.tablet() {
+                max-width: 48%;
+            }
+            @include mix.desktop() {
+                max-width: 30%;
+            }
+
+            
+
+            &--title {
+                display: flex;
+                color: var.$blanco;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(115, 214, 82);
+                max-height: 9vh;
+                h6 {
+                    margin-top: 0.5rem;
+                }
+                div {
+                    background-color: var.$secundario;
+                    color: var.$negro;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    margin: 5vh 3vw;
+                    border-radius: 8px;
+                    font-weight: bold;
+                    padding: 1vh;
+                }
+            }
+
+            &--info {
+                padding: 2vh;
+                p {
+                    font-size: 0.6rem;
+                }
+            }
+
+            .gems {
+                img {
+                }
+                max-height: 38vh;
+                height: 38vh;
+            }
+
+        }
+
+        .goblin {
+
+            margin-right: 25vw;
+
+            @include mix.mobile() { 
+                display: none;
+            }
+            @include mix.tablet() { 
+                display: none;
+            }
+            @include mix.desktop() { 
+                display: inline;
+            }
+
+            min-height: 30vh;
+            min-width: 30vh;
+            max-height: 30vh;
+            max-width: 30vh;
+            
+            &__icon {
+                height: 61vh;
+                width: 72vh;
+            }
+        }
+
+    }
+
+
+}
