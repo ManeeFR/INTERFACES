@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "MiFuente";
+    src: url('../../../fonts/Clash-Royale-Font/You\ Blockhead.ttf') format("truetype");
+}
+        
+* {
+    font-family: "MiFuente", Arial, Verdana, sans-serif;
+}
+
+.contenedor {
+    max-width: 90%;
+    margin: 8vh auto;
+}
+
+.contenido {
+    background-image: url(../../../build/img/bg.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
